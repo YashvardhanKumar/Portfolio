@@ -1,0 +1,131 @@
+@keyframes yash2 {
+    0% {
+        /* height: 100px;
+        width: 200px; */
+        transform: scale(0.3, 0.3);
+        font-size: 0px;
+    }
+    80% {
+        /* height: 40px;
+        width: 40px; */
+        transform: scale(1.3, 1.3);
+    }
+    100% {
+        /* height: 100px;
+        width: 100px; */
+        font-size: 0px;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes yash {
+    0% {
+        bottom: -400px;
+        right: 400px;
+        transform: scale(0.3, 0.3);
+    }
+    80% {
+        bottom: 100px;
+        right: 0px;
+    }
+    100% {
+        bottom: 0px;
+        right: 0px;
+        transform: scale(1, 1);
+    }
+}
+
+.container {
+    height: 589px;
+    display: grid;
+    margin: 30px;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50px;
+    box-shadow: 20px 20px 60px #656a85, -20px -20px 60px #8990b3;
+    background-image: url("./How-Tech-is-Changing-the-Way-we-Work.jpg");
+}
+
+.subContainer {
+    display: grid;
+    height: 500px;
+    width: fit-content;
+    align-content: stretch;
+    justify-content: stretch;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    border-radius: 50px;
+    box-shadow: 20px 20px 60px #656a85, -20px -20px 60px #8990b3;
+    position: relative;
+    background-image: url("./How-Tech-is-Changing-the-Way-we-Work.jpg");
+    animation: yash 0.8s;
+    animation-timing-function: ease;
+}
+
+.box {
+    border: 1px solid black;
+    height: 78px;
+    padding: 10px;
+    font-family: monospace;
+    color: aliceblue;
+    font-size: 15px;
+    text-align: center;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    background: rgba(31, 30, 32, 0.35);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    position: relative;
+    animation: yash2 0.8s;
+    animation-timing-function: ease;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.box:hover {
+    transform: scale(1.05, 1.05) translate(-5%, -5%);
+}
+
+.box:active {
+    transform: scale(1.2, 1.2) translate(3%, -10%) rotateX(360deg);
+}
+
+.box-1 {
+    grid-column: 1/3;
+}
+
+.box-1:active {
+    transform: scale(1.2, 1.2) translate(0%, -10%) rotateX(360deg)
+}
+
+.box-0 {
+    align-self: center;
+    grid-column: 1/3;
+    height: 90px;
+    width: 90px;
+    border-radius: 100px;
+    justify-self: center;
+    background-image: url("./Untitled.png");
+}
+
+.box-0:hover {
+    transform: scale(1.05, 1.05) translate(0%, -5%);
+}
+
+.box-0:active {
+    transform: scale(1.5, 1.5) translate(0%, -10%) rotateX(360deg);
+}
+
+.h-1 {
+    font-weight: 800;
+    font-size: large;
+    color: aquamarine;
+    font-style: inherit;
+    animation: yash2 0.8s;
+}
